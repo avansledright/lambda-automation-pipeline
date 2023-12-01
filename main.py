@@ -10,7 +10,7 @@ def send_sns(message):
     try:
         client.publish(
             TopicArn=os.environ['sns_topic_arn'],
-            Message=message,
+            Message=json.dumps(message),
             Subject='Automated Lambda Testing Results'
         )
         return True

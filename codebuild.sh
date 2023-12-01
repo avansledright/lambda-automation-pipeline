@@ -1,5 +1,5 @@
 #!/bin/bash
-
+unzip lambda_tests.zip
 echo "AUTOMATED LAMBDA TESTING PIPELINE"
 
 lambda_functions=$(jq .Lambdas[] lambda_tests.json)

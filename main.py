@@ -9,7 +9,7 @@ def send_sns(message):
     client = boto3.client("sns", region_name="us-west-2")
     try:
         client.publish(
-            TopicArn=os.environ['sns_topic'],
+            TopicArn=os.environ['sns_topic_arn'],
             Message=message,
             Subject='Automated Lambda Testing Results'
         )

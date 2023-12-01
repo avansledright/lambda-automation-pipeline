@@ -1,4 +1,6 @@
 #!/bin/bash
+mv $CODEBUILD_SRC_DIR/lambda_tests.json .
+mv $CODEBUILD_SRC_DIR/lambda_tests.zip .
 unzip lambda_tests.zip
 echo "AUTOMATED LAMBDA TESTING PIPELINE"
 
